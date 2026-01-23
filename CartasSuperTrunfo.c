@@ -117,6 +117,18 @@ int main() {
     resultado_per_capita = pib_per_capita1 > pib_per_capita2;
     resultado_poder = super_poder1 > super_poder2;
 
+    printf("\n\nComparação de cartas (Atributo: Densidade Populacional):\n\n");
+    if (resultado_densidade) {
+      printf("Carta 1 - %s: %.2f \n", nome_cidade1, densidade_pop1);
+      printf("Carta 2 - %s: %.2f \n", nome_cidade2, densidade_pop2);
+      printf("Carta 1 (%s) venceu!\n", nome_cidade1);
+    } else {
+      printf("Carta 1 - %s: %.2f \n", nome_cidade1, densidade_pop1);
+      printf("Carta 2 - %s: %.2f \n", nome_cidade2, densidade_pop2);
+      printf("Carta 2 (%s) venceu!\n", nome_cidade2);
+    }
+
+/*
     printf("\nComparação de Cartas:\n");
     printf("Carta venceu? (1=sim, 0=não)\n");
     printf("População: Carta 1 venceu? %d\n", resultado_populacao);
@@ -126,6 +138,6 @@ int main() {
     printf("Densidade Populacional? Carta 1 venceu %df\n", resultado_densidade);
     printf("PIB per Capita? Carta 1 venceu %d\n", resultado_per_capita);
     printf("Super Poder Carta 1 venceu? %d\n", resultado_poder);
-  
+*/ 
     return 0;
 } 
